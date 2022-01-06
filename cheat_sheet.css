@@ -1,0 +1,166 @@
+header {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+
+article {
+  width: 200px;
+  padding: 20px;
+  background-color: bisque;
+}
+
+.box3 {
+  margin: 50px;
+  padding: 50px;
+  background-color: bisque;
+}
+
+.box4 {
+  margin: 50px;
+  padding: 50px;
+  background-color: bisque;
+}
+
+.box5 {
+  margin: 50px;
+  padding: 50px;
+  background-color: bisque;
+}
+
+.box6 {
+  margin: 50px;
+  padding: 50px;
+  background-color: bisque;
+}
+
+.box7 {
+  margin: 50px;
+  padding: 50px;
+  background-color: bisque;
+}
+
+.box8 {
+  margin: 50px;
+  padding: 50px;
+  background-color: bisque;
+}
+
+.box9,
+.box10,
+.box11,
+.box12,
+.box13,
+.box14,
+.box15,
+.box16,
+.box17,
+.box18,
+.box19,
+.box20,
+.box21,
+.box22,
+.box23,
+.box24,
+.box25,
+.box26,
+.box27,
+.box28,
+.box29 {
+  margin: 50px;
+  padding: 50px;
+  background-color: bisque;
+}
+
+.border {
+  border-bottom: solid 1px burlywood;
+}
+
+.table {
+  text-align: left;
+}
+
+.table thead {
+  background-color: cadetblue;
+}
+
+.table td {
+  border-bottom: solid 1px black;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+.green {
+  background-color: green;
+  color: white;
+}
+
+.purple {
+  background-color: purple;
+  color: white;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+.orange {
+  background-color: orange;
+  color: white;
+}
+
+.container8 {
+  display: grid;
+  grid-template-areas:
+    "a b b"
+    "a c d"
+    "a e f";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 150px 100px 100px;
+  border: solid 6px yellow;
+}
+
+.box___A {
+  grid-area: a;
+}
+
+.box___B {
+  grid-area: b;
+}
+
+.box___C {
+  grid-area: c;
+}
+
+.box___D {
+  grid-area: d;
+}
+
+.box___E {
+  grid-area: e;
+}
+
+.box___F {
+  grid-area: f;
+}
+
+.marker-red::marker {
+  color: red;
+}
+
+.marker-blue::marker {
+  color: blue;
+}
+
+.border-all {
+  border: solid 6px yellow;
+}

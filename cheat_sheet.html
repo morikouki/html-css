@@ -1,0 +1,2789 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>HMTL5&CSS3学習</title>
+    <link rel="stylesheet" href="cheat_sheet.css">
+</head>
+<body>
+    <header>学習</header>
+    <span>articleタグ</span>
+    <article>
+        articleタグは、ページを構成するセクションのうちニュースやブログなどといった、その部分だけでも単体で完結したコンテンツをマークアップすることができる。
+    </article>
+
+    <!-- 3: <p>タグのことをパラグラフというがパラグラフのレベル区切りを<hr>で行うことができる -->
+    <div class="box3">3　パラグラフの区切り
+        <h4>↓hrタグなし</h4>
+        <p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。</p>
+        <p>仕事に行き詰まったり、新しい発想が出てこなくなったら、料理をしたり、本を読んだりしてリフレッシュすることが大事</p>
+
+        <h4>↓hrタグあり</h4>
+        <p>家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきました。</p>
+        <hr>
+        <p>仕事に行き詰まったり、新しい発想が出てこなくなったら、料理をしたり、本を読んだりしてリフレッシュすることが大事</p>
+    </div>
+
+    <!-- <pre>タグは、改行、タブ、半角スペースで表示を整えた「整形済みテキスト」をマークアップするためのタグ -->
+    <div class="box4">4　整形済みテキストの表示
+        <p>メールで知らせたい内容</p>
+        <pre>
+        *   *   *   *   *   *   *   *
+        ◆日時           毎週月曜日
+        ◆場所           フェテラス
+        ◆交通手段        中央線「中央駅」東口
+                        徒歩5分
+        *   *   *   *   *   *   *   *
+        </pre>
+
+        <h4>↓preタグじゃないpタグの場合</h4>
+        <p>
+            *   *   *   *   *   *   *   *
+            ◆日時           毎週月曜日
+            ◆場所           フェテラス
+            ◆交通手段        中央線「中央駅」東口
+                            徒歩5分
+            *   *   *   *   *   *   *   *
+        </p>
+    </div>
+
+    <!-- <blockquote>は引用したコンテンツをマークアップするタグ 段落を作ってくれる -->
+    <div class="box5">5　引用コンテンツの表示
+        <p class="border">「クラウドは、NIST（アメリカ国立標準技術研究所）では次のように定義されている。</p>
+        <blockquote>
+        <p>
+            クラウドコンピューティングは、共用の構成可能なコンピューティングリソース（ネットワーク、サーバー、ストレージ、アプリケーション、サービス）
+            の集積に、どこからでも、簡単に必要に応じてネットワーク経由でアクセスすることを可能とするモデルである
+        </p>
+        </blockquote>
+
+        <h4>↓blockquoteタグなし</h4>
+        <p>「クラウドは、NIST（アメリカ国立標準技術研究所）では次のように定義されている。</p>
+        <p>
+            クラウドコンピューティングは、共用の構成可能なコンピューティングリソース（ネットワーク、サーバー、ストレージ、アプリケーション、サービス）
+            の集積に、どこからでも、簡単に必要に応じてネットワーク経由でアクセスすることを可能とするモデルである
+        </p>
+    </div>
+
+    <!-- リストは、<ol><li>...</li></ol>か<ul><li>...</li></ul>で表す -->
+    <div class="box6">6　リスト表示
+        <h4>↓olタグは連番が付与されるので、順番が重要なリストに使用</h4>
+        <ol>
+            <li>沖縄</li>
+            <li>北海道</li>
+            <li>東京</li>
+        </ol>
+
+        <h4>↓ulタグは順不同な要素リストに使用</h4>
+        <ul>
+            <li>沖縄</li>
+            <li>北海道</li>
+            <li>東京</li>
+        </ul>
+
+        <h4>↓順番の表示を変更するには、olタグにオプションを指定する。以下は「type="a"」を指定。他にも降順や開始位置の指定も可能</h4>
+        <ol type="a">
+            <li>沖縄</li>
+            <li>北海道</li>
+            <li>東京</li>
+        </ol>
+    </div>
+
+
+    <!-- <dl>は説明リストで、「語句」と「語句の説明」の組み合わせで構成される情報をマークアップする。「語句」は<dt>で、「語句の説明」は<dd>でマークアップする -->
+    <div class="box7">7　「語句」(dt)「語句の説明」(dd)の組み合わせの表示
+        <dl>
+            <dt>ティム・バーナーズ＝リー</dt>
+            <dd>World Wide Web (WWW)を考案した人</dd>
+        </dl>
+
+        <h4>↓dtとddの数は自由</h4>
+        <dl>
+            <dt>Queenのメンバー</dt>
+            <dd>ブライアン・メイ</dd>
+            <dd>フレディ・マーキュリー</dd>
+            <dd>ジョン・ディーコン</dd>
+            <dd>ロジャー・テイラー</dd>
+        </dl>
+    </div>
+
+    <!-- <a>タグでリンクを設定する　いろいろな属性がある　今回はtarget属性だけ -->
+    <div class="box8">8　リンク
+        <p class="border">リンクはaタグで設定でき、いろいろな属性がある　今回はtarget属性だけ使用</p>
+
+        <h4>↓　href属性にパスを指定した場合</h4>
+        <p>
+            <a href="https://www.youtube.com/">youtube</a>
+        </p>
+
+        <h4>↓　href属性にパスを指定し、target属性に「_blank」を指定した場合</h4>
+        <!-- 「_black」以外にもあるが割愛 -->
+        <p>
+            <a href="https://www.youtube.com/" target="_blank">新しいウィンドウで開くyoutube</a>
+        </p>
+    </div>
+
+    <!-- <strong>では、重要な語句をマークアップするのに使用 -->
+    <div class="box9">9　重要な語句
+        <p><strong>家でリラックス</strong>しながら仕事ができる時代がきましたね。</p>
+    </div>
+
+    <!-- <small>は一般的に小さな文字で表示する但し書きや注意をマークアップするタグライセンス要件などに使用する -->
+    <div class="box10">10　但し書き・注意
+        <p class="border">smallタグでマークアップし、小さな文字で表示する但し書きや注意をマークアップするタグ。ライセンス要件などに使用できる</p>
+        <p>
+            <small>©︎ ACTIVE, ALL rights reserved.</small>
+        </p>
+    </div>
+
+
+    <!-- <s>は変更や更新情報のマークアップに使用でき、取り消し線を表示してくれる -->
+    <div class="box11">11　変更・更新情報
+        <p class="border">sタグは以前の情報から新しい情報に変更・更新した場合に以前の情報をマークアップすることができる。<br/>
+        ただし、編集したことを表すものではなく、過去のある時点で正しかった情報が、現時点では変更・更新され、正しくなくなったことを表す。</p>
+
+        <p><s>定価：1200円</s></p>
+        <p>新価格：1500円</p>
+    </div>
+
+    <!-- <cite>は、作品のタイトル、著者名、URLのマークアップに使用できる。斜体で表示してくれる -->
+    <div class="box12">12　作品のタイトル・著者名・URL
+        <p class="border">citeタグで作品のタイトルや著者名をマークアップし、斜体で表示してくれる</p>
+
+        <h4>↓citeタグあり</h4>
+        <p>
+            ロボット三原則はSF小説の
+            「<cite>I, Robot</cite>」で登場します。
+        </p>
+
+        <h4>↓citeタグなし</h4>
+        <p>
+            ロボット三原則はSF小説の
+            「I, Robot」で登場します。
+        </p>
+    </div>
+
+
+    <!-- <q>は引用した語句をマークアップするタグ。ブラウザは言語の種類に応じてカギ括弧やクォーテーションで語句を囲んで表示する。 -->
+    <div class="box13">13　引用
+        <p class="border">qタグで引用した語句をマークアップし、カギ括弧などで表示してくれる</p>
+
+        <p>
+            ロボット三原則は
+            <q>ロボットが従うべきとして示された原則</q>
+            のことです。
+        </p>
+
+        <h4>↓cite属性で引用元のURLを記載できるが、ブラウザには表示されない</h4>
+        <p>
+            ロボット三原則は
+            <q cite="https://ja.wikipedia.org/wiki/ロボット工学三原則">ロボットが従うべきとして示された原則</q>
+            のことです。
+        </p>
+    </div>
+
+    <!-- <dfn>は、語句の定義を記述する際に、定義する語句をマークアップするタグで<dfn>を含む段落やセクションに語句についての定義を記述する -->
+    <div class="box14">14　定義する語句
+        <p class="border">dfnタグでは、語句の定義を記述する際に、定義する語句をマークアップする。斜体で表示される</p>
+
+        <h4>↓dfnタグあり</h4>
+        <p>
+            <dfn>Robot</dfn>とは、一連の作業を自動で行う装置のこと
+        </p>
+
+        <h4>↓dfnタグなし</h4>
+        <p>
+            Robotとは、一連の作業を自動で行う装置のこと
+        </p>
+    </div>
+
+
+    <!-- <abbr>は、略語や頭文字をマークアップするタグ。titile属性を利用して元の語句を記述する。 -->
+    <div class="box15">15　略語
+        <p class="border">
+            abbrタグは、略語や頭文字をマークアップするタグ。titile属性を利用して元の語句を記述する。
+            ブラウザのChrome, Firefox, Edgeでは点線をつけた表示になるが、他のブラウザは変わらない
+        </p>
+
+        <p>
+            <abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr>
+            で策定された規格です。
+        </p>
+    </div>
+
+
+    <!-- <ruby>は、語句にふりがなをつけることができる。 -->
+    <div class="box16">16　ルビ（ふりがな）
+        <p class="border">rubyタグでふりがなをつけれる。rbタグで語句を囲みrtタグでその語句に対してのふりがなを記載する。(rbタグはなくてもいい)</p>
+        <p>
+            <ruby>
+                <rb>便利</rb><rt>べんり</rt>
+                なホームアシスタント。
+            </ruby>
+        </p>
+
+        <h4>ルビに未対応なブラウザ用の設定</h4>
+        <p class="border">↓未対応のブラウザでは、rpタグを使用して()で囲った表示になるようにもできる</p>
+        <p>
+            <ruby>
+                <rb>便利</rb>
+                <rp>(</rp><rt>べんり</rt><rp>)</rp>
+            </ruby>なホームアシスト
+        </p>
+    </div>
+
+
+    <!-- <mark>は、特定の語句をマーキングしハイライト表示することができる。 -->
+    <div class="box17">17　ハイライト
+        <p class="border">ブラウザでは黄色の背景で表示されるが、CSSの「background-color」プロパティで色を変更できる</p>
+        <p>
+            クラウドコンピューティングは、共用の構成可能なコンピューティングリソース（ネットワーク、サーバー、ストレージ、アプリケーション、サービス）
+            の集積に、
+            <mark>どこからでも簡単に、必要に応じて、ネットワーク経由でアクセスすることを可能とする</mark>
+            モデルである
+        </p>
+    </div>
+
+
+    <!-- <wbr>は、改行を認める箇所を指示するタグで画面の横幅に応じて、設定した箇所を基準に改行を入れてくれる -->
+    <div class="box18">18　改行を認める箇所
+        <p class="border">brタグで改行を入れられるが、wbrタグは画面幅に応じて改行をしてくれる</p>
+        <p>楽しい年末が来た、今年は久しぶりにフェスに参加する予定だ。<wbr>楽しみで仕方ない。</p>
+    </div>
+
+
+    <!-- <ins>は追加したコンテンツを、<del>は削除したコンテンツをマークアップする。datetime属性で編集した日時を明記できる。 -->
+    <div class="box19">19　追加したコンテンツ・削除したコンテンツ
+        <p class="border">
+            insタグで追加したコンテンツ、delタグで削除したコンテンツをマークアップする。
+            ブラウザでは、追加したコンテンツに下線が、削除したコンテンツに取り消し線が表示される
+        </p>
+
+        <h3>ToDo</h3>
+        <ul>
+            <li><del datetime="2021-12-25"><ins datetime="2021-12-26">挨拶回りをする</ins></del></li>
+            <li><del datetime="2021-12-25"><ins datetime="2021-12-26">新しいティーポットを探す</ins></del></li>
+            <li><ins datetime="2021-12-26">ポストカードの印刷</ins></li>
+            <li><ins datetime="2021^12-26">アールグレイを追加注文</ins></li>
+        </ul>
+    </div>
+
+
+    <!-- <details>は、追加情報をマークアップし、開閉式のウィジェットの形で表示することができる。トップに表示する概要は<summary>でマークアップする。 -->
+    <div class="box20">20　追加情報
+        <div>
+            <img src="introbottom.jpeg" width="400px" height="200px">
+            <!-- <details>を<details open>にしたらウィジェットが開いた状態から始まる -->
+            <details>
+                <summary>フォトデータ</summary>
+                <dl>
+                    <dt>ファイル名</dt>
+                    <dd>introbottom.jpeg</dd>
+                    <dt>大きさ</dt>
+                    <dd>400×200</dd>
+                </dl>
+            </details>
+        </div>
+    </div>
+
+
+    <!--　グローバル属性は HTML5で定義されたすべてのタグで使用できる属性 -->
+    <div class="box21">21　グローバル属性
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>グローバル属性</th>
+                    <th>機能</th>
+                    <th>内容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>accesskey</td>
+                    <td>キーボードショートカット</td>
+                    <td>「accesskey="1"」と要素に指定したらChromeだと「Alt + 1」のショートカットキーを作成できる</td>
+                </tr>
+                <tr>
+                    <td>tabindex</td>
+                    <td>Tabキーによる選択順</td>
+                    <td>「tabindex="1"」などでTabキーを使用して要素を選択していく順番を指定することができる。数字で順番を指定</td>
+                </tr>
+                <tr>
+                    <td>class, id</td>
+                    <td>クラス名, idを付与</td>
+                    <td>任意の名前を与えて、CSSなどをつけられる</td>
+                </tr>
+                <tr>
+                    <td>autocapitalize</td>
+                    <td>オートキャピタライズ</td>
+                    <td>モバイルデバイスでテキスト入力する際の入力文字列の先頭大文字を制御する。「autocapitalize="words"」だと単語の最初の文字が大文字になる。</td>
+                </tr>
+                <tr>
+                    <td>autofocus</td>
+                    <td>オートフォーカス</td>
+                    <td>ページをロードした時に入力フォームがすぐに入力できるように選択された状態になる。</td>
+                </tr>
+                <tr>
+                    <td>contenteditable</td>
+                    <td>編集の可否</td>
+                    <td contenteditable="true">コンテンツの編集の可否を「true」「false」で指定できる。「true」だとブラウザ上でコンテンツの編集ができる</td>
+                </tr>
+                <tr>
+                    <td>inputmode</td>
+                    <td>最適な入力メカニズム</td>
+                    <td>編集可能な要素を指定したときに最適な入力キーボードを表示する。「inputmode="email"」だとメアドの入力に最適な仮想キーボードを表示</td>
+                </tr>
+                <tr>
+                    <td>enterkeyhint</td>
+                    <td>Enterキーのアクションラベル</td>
+                    <td>値を入力するキーボードのEnterキーを表示するアクションラベル（アイコンやテキスト）を指定できる</td>
+                </tr>
+                <tr>
+                    <td>draggable</td>
+                    <td>ドラッグの可否</td>
+                    <td draggable="true">ドラッグの可否を「true」「false」で指定できる。「true」にするとブラウザ画面上でコンテンツのドラッグが可能になる。</td>
+                </tr>
+                <tr>
+                    <td>nonce</td>
+                    <td>コンテンツセキュリティポリシーの設定</td>
+                    <td>Webページが読み込めるリソースやスクリプトを制御するための仕組み</td>
+                </tr>
+                <tr>
+                    <td>hidden</td>
+                    <td>隠す</td>
+                    <td>要素を隠すことができる。研修ではformでidを送るときなどに使用した</td>
+                </tr>
+                <tr>
+                    <td>lang</td>
+                    <td>言語の種類</td>
+                    <td>言語の指定ができる「ja」が日本語、「en」が英語などである。毎回html全体に使用しているが、要素ごとでも使用可能</td>
+                </tr>
+                <tr>
+                    <td>dir</td>
+                    <td>書字方向</td>
+                    <td dir="rtl">文字の方向を指定できる「auto」は自動判別なので正解がわからない時に使用。「ltr」は左から右。「rtl」は右から左。</td>
+                </tr>
+                <tr>
+                    <td>spellcheck</td>
+                    <td>スペルチェック</td>
+                    <td spellcheck="true" contenteditable="true">ブラウザは、編集可能なテキストコンテンツに対してスペルチェックを行う（赤文字の波線が表示される）。</td>
+                </tr>
+                <tr>
+                    <td>translate</td>
+                    <td>翻訳の可否</td>
+                    <td>「yes」か「no」で翻訳の可否を指定できる。©コピーライトなどでGoogle本屋をしても英語のまま表示したいものなどに使用したらいい</td>
+                </tr>
+                <tr>
+                    <td>style</td>
+                    <td>インラインスタイルシート</td>
+                    <td style="color: red">簡単に言うとCSSをhtmlにかけるタグ</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>補助的な情報</td>
+                    <td title="特に何もない">カーソルを合わせると補助的な助方を表示することができる。</td>
+                </tr>
+                <tr>
+                    <td>data-*</td>
+                    <td>カスタムデータ</td>
+                    <td data-food-type="中華">情報を付加するのに適切な属性がない場合に利用することができる。「*」に1文字以上の語句を入れて独自に設定する。1つのタグに複数のカスタムデータを指定することも可能</td>
+                </tr>
+                <tr>
+                    <td>onclickなど</td>
+                    <td>イベントハンドラ</td>
+                    <td>スクリプトを実行するための属性。属性値としてJavaScriptのコードを記述する。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="box22">22 cssのセレクタ
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>分類</th>
+                    <th>セレクタ</th>
+                    <th>適用先要素</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>タイプセレクタ</td>
+                    <td>要素名</td>
+                    <td>指定した名前の要素</td>
+                </tr>
+                <tr>
+                    <td>ユニバーサルセレクタ</td>
+                    <td>*</td>
+                    <td>すべての要素</td>
+                </tr>
+                <tr>
+                    <td>属性セレクタ</td>
+                    <td>[属性名]</td>
+                    <td>指定した属性が記述された要素</td>
+                </tr>
+                <tr>
+                    <td>属性セレクタ</td>
+                    <td>[属性名="値"]</td>
+                    <td>指定した属性の値が「"値"」の要素</td>
+                </tr>
+                <tr>
+                    <td>属性セレクタ</td>
+                    <td>[属性名~="値"]</td>
+                    <td>指定した属性の値にスペース区切りの「"値"」が含まれる要素</td>
+                </tr>
+                <tr>
+                    <td>属性セレクタ</td>
+                    <td>[属性名|="値"]</td>
+                    <td>指定した属性の値にハイフン(-)区切りの「"値"」で始まる要素</td>
+                </tr>
+                <tr>
+                    <td>属性セレクタ</td>
+                    <td>[属性名^="値"]</td>
+                    <td>指定した属性の値が「"値"」で始まる要素</td>
+                </tr>
+                <tr>
+                    <td>属性セレクタ</td>
+                    <td>[属性名$="値"]</td>
+                    <td>指定した属性の値が「"値"」で終わる要素</td>
+                </tr>
+                <tr>
+                    <td>属性セレクタ</td>
+                    <td>[属性名*="値"]</td>
+                    <td>指定した属性の値の一部に「"値"」が含まれる要素</td>
+                </tr>
+                <tr>
+                    <td>クラスセレクタ</td>
+                    <td>.class</td>
+                    <td>クラス名が「class」の要素</td>
+                </tr>
+                <tr>
+                    <td>IDセレクタ</td>
+                    <td>#id</td>
+                    <td>ID名が「id」の要素</td>
+                </tr>
+                <tr>
+                    <td>言語擬似クラス</td>
+                    <td>:lang(~)</td>
+                    <td>指定した言語の要素</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(全要素をカウント)</td>
+                    <td>:nth-child(~)</td>
+                    <td>~番目</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(全要素をカウント)</td>
+                    <td>:nth-last-child(~)</td>
+                    <td>最後から~番目の要素</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(全要素をカウント)</td>
+                    <td>:first-child</td>
+                    <td>最初の要素（親要素から見て、子要素すべての最初）</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(全要素をカウント)</td>
+                    <td>:last-child</td>
+                    <td>最後の要素（親要素から見て、子要素すべての最後）</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(全要素をカウント)</td>
+                    <td>:only-child</td>
+                    <td>同1個だけ子要素がある（親要素から見て、子要素が1個だけある）</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(特定要素をカウント)</td>
+                    <td>:nth-of-type(~)</td>
+                    <td>ある要素の~番目</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(特定要素をカウント)</td>
+                    <td>:nth-last-of-type(~)</td>
+                    <td>最後から~番目の要素</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(特定要素をカウント)</td>
+                    <td>:first-of-type(~)</td>
+                    <td>ある要素の最初（親要素から見て、ある子要素の最初）</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(特定要素をカウント)</td>
+                    <td>:last-of-type(~)</td>
+                    <td>ある要素の最後（親要素から見て、ある子要素の最後）</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(特定要素をカウント)</td>
+                    <td>:only-of-type(~)</td>
+                    <td>1個だけある子要素がある（親要素から見て、ある子要素が1個だけある）</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(ルート擬似クラス)</td>
+                    <td>:root</td>
+                    <td>ルート要素</td>
+                </tr>
+                <tr>
+                    <td>構造擬似クラス(エンプティ擬似クラス)</td>
+                    <td>:empty</td>
+                    <td>中身が空の要素</td>
+                </tr>
+                <tr>
+                    <td>ダイナミック擬似クラス(リンク擬似クラス)</td>
+                    <td>:link</td>
+                    <td>リンク先に未アクセスの要素</td>
+                </tr>
+                <tr>
+                    <td>ダイナミック擬似クラス(リンク擬似クラス)</td>
+                    <td>:visited</td>
+                    <td>リンク先にアクセス済みの要素</td>
+                </tr>
+                <tr>
+                    <td>ダイナミック擬似クラス(ユーザーアクション擬似クラス)</td>
+                    <td>:hover</td>
+                    <td>カーソルを重ねた要素</td>
+                </tr>
+                <tr>
+                    <td>ダイナミック擬似クラス(ユーザーアクション擬似クラス)</td>
+                    <td>:focus</td>
+                    <td>フォーカスした要素</td>
+                </tr>
+                <tr>
+                    <td>ダイナミック擬似クラス(ユーザーアクション擬似クラス)</td>
+                    <td>:active</td>
+                    <td>アクティブな要素</td>
+                </tr>
+                <tr>
+                    <td>ターゲット擬似クラス</td>
+                    <td>:target</td>
+                    <td>リンクターゲットの要素</td>
+                </tr>
+                <tr>
+                    <td>インプット擬似クラス</td>
+                    <td>:enabled / :disabled</td>
+                    <td>有効 / 無効なコントロール</td>
+                </tr>
+                <tr>
+                    <td>インプット擬似クラス</td>
+                    <td>:read-only / :read-write</td>
+                    <td>表示専用 / 編集可能なコントロール</td>
+                </tr>
+                <tr>
+                    <td>インプット擬似クラス</td>
+                    <td>:valid / :invalid</td>
+                    <td>検証結果が正しい / 正しくないコントロール</td>
+                </tr>
+                <tr>
+                    <td>インプット擬似クラス</td>
+                    <td>:required / :optional</td>
+                    <td>必須 / 任意のコントロール</td>
+                </tr>
+                <tr>
+                    <td>インプット擬似クラス</td>
+                    <td>:in-range / :out-of-range</td>
+                    <td>範囲内 / 範囲外のコントロール</td>
+                </tr>
+                <tr>
+                    <td>インプット擬似クラス</td>
+                    <td>:placeholder-shown</td>
+                    <td>プレースホルダーを表示したコントロール</td>
+                </tr>
+                <tr>
+                    <td>インプット擬似クラス</td>
+                    <td>:checked</td>
+                    <td>選択中のコントロール</td>
+                </tr>
+                <tr>
+                    <td>インプット擬似クラス</td>
+                    <td>:default</td>
+                    <td>標準のコントロール</td>
+                </tr>
+                <tr>
+                    <td>インプット擬似クラス</td>
+                    <td>:indeterminate</td>
+                    <td>不確定なコントロール</td>
+                </tr>
+                <tr>
+                    <td>否定擬似クラス</td>
+                    <td>:not(~)</td>
+                    <td>指定した条件と一致しない要素</td>
+                </tr>
+                <tr>
+                    <td>::first-line擬似要素</td>
+                    <td>::first-line</td>
+                    <td>要素の１行目</td>
+                </tr>
+                <tr>
+                    <td>::first-letter擬似要素</td>
+                    <td>::first-letter</td>
+                    <td>要素の１文字目</td>
+                </tr>
+                <tr>
+                    <td>::before / ::after擬似要素</td>
+                    <td>::before</td>
+                    <td>要素の前に挿入したコンテンツ</td>
+                </tr>
+                <tr>
+                    <td>::before / ::after擬似要素</td>
+                    <td>::after</td>
+                    <td>要素の後に挿入したコンテンツ</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="box23">23 メディアクエリ
+        <p>メディアクエリ(@media)を利用すると、出力デバイスの特性や種類を判別し、条件を満たす場合にだけCSSの設定を適用することができる。</p>
+        <pre>
+            ■画面幅が599px以下の際は「h1」のフォントサイズが「26px」になる
+
+            @media (max-width: 599px) {
+                .post h1 {
+                    font-size: 26px;
+                }
+            }
+        </pre>
+        <pre>
+            ■画面幅が600~768pxの間は、「h1」のフォントサイズが「32px」になる
+
+            @media (min-width: 600px) and (max-width: 768px) {
+                .post h1 {
+                    font-size: 32px;
+                }
+            }
+        </pre>
+        <pre>
+            ■画面幅が769px以上の際は「h1」のフォントサイズは「40px」になる
+
+            @media (min-width: 769px) {
+                .post h1 {
+                    font-size: 40px;
+                }
+            }
+        </pre>
+        <h4>メディアクエリは以下のような特性を判別することができる。</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>特性名</th>
+                    <th>判別できる特性</th>
+                    <th>指定できる値</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>width / min-width / max-width</td>
+                    <td>ビューポートの横幅</td>
+                    <td>数値</td>
+                </tr>
+                <tr>
+                    <td>height / min-height / max-height</td>
+                    <td>ビューポートの高さ</td>
+                    <td>数値</td>
+                </tr>
+                <tr>
+                    <td>aspect-ratio / min-aspect-ratio / max-aspect-ratio</td>
+                    <td>ビューポートの縦横比</td>
+                    <td>縦横比 「横/縦」と言う形で指定</td>
+                </tr>
+                <tr>
+                    <td>orientation</td>
+                    <td>ビューポートの向き</td>
+                    <td>portrait(縦向き) / landscape(横向き)</td>
+                </tr>
+                <tr>
+                    <td>resolution / min-resolution / max-resolution</td>
+                    <td>解像度(DPR)</td>
+                    <td>解像度 単位は dpi / dpcm / dppx</td>
+                </tr>
+                <tr>
+                    <td>-webkit-device-pixel-ratio / -webkit-min-device-pixel-ration / -webkit-max-device-pixel-ration</td>
+                    <td>解像度(DPR)</td>
+                    <td>整数</td>
+                </tr>
+                <tr>
+                    <td>scan</td>
+                    <td>走査方式</td>
+                    <td>progressive(プログレッシブ) / interlace(インターレース)</td>
+                </tr>
+                <tr>
+                    <td>grid</td>
+                    <td>グリッドベースのデバイス</td>
+                    <td>1(グリッドベースのデバイス) / 0(それ以外)</td>
+                </tr>
+                <tr>
+                    <td>color / min-cold / max-color</td>
+                    <td>カラーデバイス</td>
+                    <td>整数 (カラーのビット数)</td>
+                </tr>
+                <tr>
+                    <td>color-index / min-color-index / max-color-index</td>
+                    <td>カラールックアップテーブル使用デバイス</td>
+                    <td>整数 (カラールックアップテーブルのエントリ数)</td>
+                </tr>
+                <tr>
+                    <td>monochrome / min-monochrome / max-monochrome</td>
+                    <td>モノクロデバイス</td>
+                    <td>整数 (階調のビット数)</td>
+                </tr>
+                <tr>
+                    <td>device-width / min-device-width / max-device-width</td>
+                    <td>スクリーンの横幅</td>
+                    <td>整数</td>
+                </tr>
+                <tr>
+                    <td>device-height / min-device-height / max-device-height</td>
+                    <td>スクリーンの高さ</td>
+                    <td>整数</td>
+                </tr>
+                <tr>
+                    <td>device-aspect-ratio / min-device-aspect-ratio / max-device-aspect-ratio</td>
+                    <td>スクリーンの縦横比</td>
+                    <td>縦横比 「横/縦」と言う形で指定</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="box24">24 ボックスレイアウト
+        <h4>アウターディスプレイタイプ</h4>
+        <p>ボックスとボックスの位置関係（アウター）のコントロール方法を指定する値</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>displayの値</th>
+                    <th>アウターディスプレイ</th>
+                    <th>インナーディスプレイ</th>
+                    <th>ボックスの呼称</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>block</td>
+                    <td>ブロック</td>
+                    <td>フローレイアウト</td>
+                    <td>ブロックボックス</td>
+                </tr>
+                <tr>
+                    <td>inline</td>
+                    <td>インライン</td>
+                    <td>フローレイアウト</td>
+                    <td>インラインボックス</td>
+                </tr>
+                <tr>
+                    <td>run-in</td>
+                    <td>ランイン</td>
+                    <td>フローレイアウト</td>
+                    <td>ランインボックス</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre>
+            例
+            .boxA {display: block;}
+            .boxB {display: inline;}
+            .boxC {display: run-in;}
+        </pre>
+        <div class="boxA red" style="display: block;">A</div>
+        <div class="boxB blue" style="display: inline;">B</div>
+        <div class="boxC green" style="display: run-in;">C</div>
+
+        <h4>インナーディスプレイタイプ</h4>
+        <p>ボックスの内側にあるもの（インナー）のコントロール方法を指定する値</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>displayの値</th>
+                    <th>インナーディスプレイタイプ</th>
+                    <th>アウターディスプレイタイプ</th>
+                    <th>ボックスの呼称</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>block / inline / run-in</td>
+                    <td>フローレイアウト</td>
+                    <td>ブロック / インライン / ランイン</td>
+                    <td>アウターディスプレイタイプによる</td>
+                </tr>
+                <tr>
+                    <td>flow-root</td>
+                    <td>フローレイアウト（ルート）</td>
+                    <td>ブロック</td>
+                    <td>ブロックボックス（フロールート）</td>
+                </tr>
+                <tr>
+                    <td>flex</td>
+                    <td>フレキシブルボックスレイアウト</td>
+                    <td>ブロック</td>
+                    <td>フレックスコンテナ</td>
+                </tr>
+                <tr>
+                    <td>grid</td>
+                    <td>グリッドレイアウト</td>
+                    <td>ブロック</td>
+                    <td>グリッドコンテナナ</td>
+                </tr>
+                <tr>
+                    <td>table</td>
+                    <td>テーブルレイアウト</td>
+                    <td>ブロック</td>
+                    <td>テーブルボックス</td>
+                </tr>
+                <tr>
+                    <td>ruby</td>
+                    <td>ルビレイアウト</td>
+                    <td>インライン</td>
+                    <td>ルビコンテナ</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre>
+            例
+            .container {
+                display: flow-root;
+                border: solid 6px yellow;
+            }
+        </pre>
+        <div class="container" style="display: flow-root; border: solid 6px yellow;">
+            <div class="boxD red">D</div>
+            <div class="boxE blue">E</div>
+        </div>
+        <pre>
+            例
+            .container2 {
+                display: flex;
+                border: solid 6px yellow;
+            }
+        </pre>
+        <div class="container2" style="display: flex; border: solid 6px yellow;">
+            <div class="boxF red">F</div>
+            <div class="boxG blue">G</div>
+        </div>
+
+        <h4>インラインレベルのインバーディスプレイタイプ</h4>
+        <p>インナーディスプレイタイプで、アウターディスプレイタイプが「ブロック」になるものを「インライン」にしたい場合に使用する値</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>displayの値</th>
+                    <th>インナーディスプレイタイプ</th>
+                    <th>アウターディスプレイタイプ</th>
+                    <th>ボックスの呼称</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>inline-block</td>
+                    <td>フローレイアウト（ルート）</td>
+                    <td>インライン</td>
+                    <td>インラインブロックボックス</td>
+                </tr>
+                <tr>
+                    <td>inline-flex</td>
+                    <td>フレキシブルボックスレイアウト</td>
+                    <td>インライン</td>
+                    <td>インラインフレックスコンテナ</td>
+                </tr>
+                <tr>
+                    <td>inline-grid</td>
+                    <td>グリッドレイアウト</td>
+                    <td>インライン</td>
+                    <td>インライングリッドコンテナ</td>
+                </tr>
+                <tr>
+                    <td>inline-table</td>
+                    <td>テーブルレイアウト</td>
+                    <td>インライン</td>
+                    <td>インラインテーブル</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre>
+            例
+            .container3 {
+                display: inline-flex;
+                border: solid 6px yellow;
+            }
+        </pre>
+        <div class="container3" style="display: inline-flex; border: solid 6px yellow;">
+            <div class="boxH red">H</div>
+            <div class="boxI blue">I</div>
+        </div>
+
+        <h4>特殊なディスプレイタイプ</h4>
+        <p>特殊な処理を行うディスプレイタイプ</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>displayの値</th>
+                    <th>ボックスの処理</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>list-item</td>
+                    <td>ブロックボックスに加えて、リストマークを表示するマーカーボックスを構成</td>
+                </tr>
+                <tr>
+                    <td>none</td>
+                    <td>ボックスを構造しない（子階層のボックスも構成しない）</td>
+                </tr>
+                <tr>
+                    <td>contents</td>
+                    <td>ボックスを構造しない（子階層のボックスは構成する）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>display: block　ブロック</h4>
+        <p>アウターディスプレイタイプが「ブロック」になり、ブロックボックスが構成される。ブロックボックスはブラウザ画面や親要素に合わせた横幅になり、上から下に並べて表示される。</p>
+        <pre>
+            例
+            .boxJ {display: block;}
+            .boxK {display: block;}
+        </pre>
+        <div class="boxJ red">J</div>
+        <div class="boxK blue">K</div>
+        <p>widthプロパティで横幅を短くしても、後続のボックスが横に並ぶことはない</p>
+        <pre>
+            例
+            .boxJ {display: block; width: 80px;}
+            .boxK {display: block; width: 80px;}
+        </pre>
+        <div class="boxJ red" style="width: 80px;">J</div>
+        <div class="boxK blue" style="width: 80px;">K</div>
+
+        <h4>display: inline　インライン</h4>
+        <p>アウターディスプレイタイプが「インライン」となり、インラインボックスが構成される。インラインボックスはボックス内のコンテンツに合わせた横幅になり、横に並べて表示される。また、テキストコンテンツと同じように扱われるため、HTMLソースで挿入した改行が半角スペースに変換され、ボックスの間に入っている。</p>
+        <pre>
+            例
+            .boxL {display: inline;}
+            .boxM {display: inline;}
+        </pre>
+        <div class="boxL red" style="display: inline;">L</div>
+        <div class="boxM blue" style="display: inline;">M</div>
+        <p>インラインボックスの間のスペースを削除したいときは、HTMLソースの改行を削除する</p>
+        <div class="boxL red" style="display: inline;">L</div><div class="boxM blue" style="display: inline;">M</div>
+        <p>widthやheightプロパティはインラインボックスでは機能しない</p>
+
+        <h4>display: run-in　ランイン</h4>
+        <p>IE以外は非対応なので割愛</p>
+
+        <h4>display: block / inline / run-in　フローレイアウト</h4>
+        <p>displayプロパティの値を「block」「inline」「run-in」と指定すると、インナーディスプレイタイプ（レイアウトモード）を「フローレイアウト」にすることができる。</p>
+        <p>フローレイアウトでは、ボックスの中身がそれぞれのアウターディスプレイタイプ（ブロック / インライン / ランイン）の規則に従って並べられる。</p>
+        <pre>
+            例
+            .container4 {
+                display: block;
+                border: solid 6px yellow;
+            }
+
+            .boxAA, .boxBB, .boxFF {display: block;}
+            .boxCC, .boxDD, .boxEE {display: inline;}
+        </pre>
+        <div class="container4" style="display: block; border: solid 6px yellow;">
+            <div class="boxAA red" style="display: block;">AA</div>
+            <div class="boxBB blue" style="display: block;">BB</div>
+            <div class="boxCC green" style="display: inline;">CC</div>
+            <div class="boxDD orange" style="display: inline;">DD</div>
+            <div class="boxEE black" style="display: inline;">EE</div>
+            <div class="boxFF purple" style="display: block;">FF</div>
+        </div>
+
+        <h4>display: flow-root　フローレイアウト（フロールート）</h4>
+        <p>インナーディスプレイタイプ（レイアウトモード）が「フローレイアウト」になる。ただし、フローレイアウトのルート（フロールート）として、ボックスが別レイヤーで扱われるようになる。</p>
+        <pre>
+            例
+            このとき、Bにfloatを適用すると、下記レイアウトのようにfloatがフローティングボックス（浮動ボックス）という特殊なボックスを構成し、別レイヤーで扱われる。
+            .container5, .container6 {
+                display: block;
+                border: solid 6px yellow;
+            }
+
+            .boxGG {
+                float: left;
+                height: 100px;
+            }
+        </pre>
+        <div class="container5" style="display: block; border: solid 6px yellow;">
+            <div class="box_A red">A</div>
+            <div class="box_B blue" style="float: left; height: 100px">B</div>
+            <div class="box_C green">C</div>
+        </div>
+        <div class="container6" style="display: block; border: solid 6px yellow;">
+            <div class="box_D orange">D</div>
+            <div class="box_E black">E</div>
+            <div class="box_F purple">F</div>
+        </div>
+
+        <pre>
+            例
+            フローティングボックスが影響する範囲をdiv内に留めたい場合、divのdisplayを「flow-root」と指定する。すると、divも別レイヤーで扱われるためようになり下記のようなレイアウトになる。
+            .container5, .container6 {
+                display: flow-root;
+                border: solid 6px yellow;
+            }
+
+            .boxGG {
+                float: left;
+                height: 100px;
+            }
+        </pre>
+        <div class="container5" style="display: flow-root; border: solid 6px yellow;">
+            <div class="box_A red">A</div>
+            <div class="box_B blue" style="float: left; height: 100px">B</div>
+            <div class="box_C green">C</div>
+        </div>
+        <div class="container6" style="display: block; border: solid 6px yellow;">
+            <div class="box_D orange">D</div>
+            <div class="box_E black">E</div>
+            <div class="box_F purple">F</div>
+        </div>
+
+        <pre>
+            例
+            D~Fをグループ化したcontainer6の方だけdisplayを「flow-root」に指定すると、フローティングボックスのBとレイヤーが揃い、下記のような表示になる。
+            .container5, .container6 {
+                display: flow-root;
+                border: solid 6px yellow;
+            }
+
+            .boxGG {
+                float: left;
+                height: 100px;
+            }
+        </pre>
+        <div class="container5" style="border: solid 6px yellow;">
+            <div class="box_A red">A</div>
+            <div class="box_B blue" style="float: left; height: 100px">B</div>
+            <div class="box_C green">C</div>
+        </div>
+        <div class="container6" style="display: flow-root; border: solid 6px yellow;">
+            <div class="box_D orange">D</div>
+            <div class="box_E black">E</div>
+            <div class="box_F purple">F</div>
+        </div>
+
+        <h4>display: flex　フレキシブルボックスレイアウト</h4>
+        <p>「フレックスコンテナ」と呼ばれるボックスを構成し、インナーディスプレイタイプ（レイアウトモード）を「フレキシブルボックスレイアウト」にすることができる</p>
+        <pre>
+            例
+            フレキシブルボックスレイアウトでは、フレックスコンテナの中身がすべて横に並べて表示される。
+            下記のサンプルではdivのdisplayを「flex」と指定し、フレックスコンテナにしている。そうするとグループ化したA~Fのボックスが「フレックスアイテム」として処理され、中身に合わせた横幅で横に並べて表示される。
+            .container7 {
+                display: flex;
+                border: solid 6px yellow;
+            }
+        </pre>
+        <div class="container7" style="display: flex; border: solid 6px yellow;">
+            <div class="box__A red">A</div>
+            <div class="box__B blue">B</div>
+            <div class="box__C green">C</div>
+            <div class="box__D orange">D</div>
+            <div class="box__E black">E</div>
+            <div class="box__F purple">F</div>
+        </div>
+        <pre>
+            例
+            フレックスアイテムの横幅はflexプロパティを使って柔軟にコントロールできるようになっている。
+            例えば、フレックスコンテナを6つのフレックスアイテムで均等割にする場合、右のようにdivのflexを「1 1 0」と指定する
+            .container7 {
+                display: flex;
+                border: solid 6px yellow;
+            }
+
+            .container7 > div {
+                flex: 1 1 0;
+            }
+        </pre>
+        <div class="container7" style="display: flex; border: solid 6px yellow;">
+            <div class="box__A red" style="flex: 1 1 0;">A</div>
+            <div class="box__B blue" style="flex: 1 1 0;">B</div>
+            <div class="box__C green" style="flex: 1 1 0;">C</div>
+            <div class="box__D orange" style="flex: 1 1 0;">D</div>
+            <div class="box__E black" style="flex: 1 1 0;">E</div>
+            <div class="box__F purple" style="flex: 1 1 0;">F</div>
+        </div>
+        <pre>
+            例
+            また、フレックスアイテムを２行で並べる場合、divのflex-wrapを「wrap」と指定し、フレックスアイテムの横幅をdivのflexで指定する。
+            ここではカラム落ちで２行にするため、flexを「1 1 33%」と指定しています。
+            .container7 {
+                display: flex;
+                flex-wrap: wrap;
+                border: solid 6px yellow;
+            }
+
+            .container7 > div {
+                flex: 1 1 33%;
+            }
+        </pre>
+        <div class="container7" style="display: flex; flex-wrap: wrap; border: solid 6px yellow;">
+            <div class="box__A red" style="flex: 1 1 33%;">A</div>
+            <div class="box__B blue" style="flex: 1 1 33%;">B</div>
+            <div class="box__C green" style="flex: 1 1 33%;">C</div>
+            <div class="box__D orange" style="flex: 1 1 33%;">D</div>
+            <div class="box__E black" style="flex: 1 1 33%;">E</div>
+            <div class="box__F purple" style="flex: 1 1 33%;">F</div>
+        </div>
+
+        <p>
+            <a href="https://www.webcreatorbox.com/tech/css-flexbox-cheat-sheet">
+                flex参考サイト
+            </a>
+        </p>
+
+        <h4>display: grid　グリッドレイアウト</h4>
+        <p>「グリッドコンテナ」と呼ばれるボックスを構成し、インナーディスプレイタイプ（レイアウトモード）を「グリッドレイアウト」にすることができる。</p>
+        <p>グリッドレイアウトでは格子状のグリッドを作成し、グリッドコンテナの中身（グリッドアイテム）を配置してレイアウトを形にする。</p>
+        <pre>
+            .container8 {
+                display: grid;
+
+                ↓グリッドエリアに任意の名前をつける
+                grid-template-areas: "a b b"
+                                     "a c b"
+                                     "a e f";
+
+                ↓グリッドエリアの横幅の指定
+                grid-template-columns: 1fr 1fr 1fr;
+
+                ↓グリッドエリアの縦幅の指定
+                grid-template-rows: 150px 100px 100px;
+
+                border: solid 6px yellow;
+            }
+
+            ↓grid-area　で「grid-template-areas」でつけた名前に配置している
+            .box___A {grid-area: a;}
+            .box___B {grid-area: b;}
+            .box___C {grid-area: c;}
+            .box___D {grid-area: d;}
+            .box___E {grid-area: e;}
+            .box___E {grid-area: f;}
+        </pre>
+        <div class="container8">
+            <div class="box___A red">A</div>
+            <div class="box___B blue">B</div>
+            <div class="box___C green">C</div>
+            <div class="box___D orange">D</div>
+            <div class="box___E black">E</div>
+            <div class="box___F purple">F</div>
+        </div>
+
+        <h4>display: list-item　リスト</h4>
+        <p>リスト形式のコンテンツをマークアップするliでは、ブロックボックスとマーカーボックスの２つのボックスが構成されます。</p>
+        <p>ブロックボックスうにはliでマークアップした中身が、マーカーボックスにはリストマークが表示される</p>
+        <pre>
+            例
+            ・沖縄
+
+            「・」がマーカーボックス
+            「沖縄　　　　　」がブロックボックス
+
+            ただし、liタグのdisplayの値は標準で「list-item」なので、指定しなくても良い
+        </pre>
+        <ul>
+            <li style="display: list-item;">沖縄</li>
+        </ul>
+        <pre>
+            例
+            ブロックボックスの設定
+
+            liのレイアウトやデザインはliのプロパティで調整する。
+            下記では、liの上下マージン、パディング、ボーダー、背景を指定したものであり、これらはブロックボックスのみに適用され、マーカーボックスには影響されない。
+
+            li {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                padding: 5px;
+                border: solid 5px yellow;
+                background: orange;
+            }
+        </pre>
+        <ul>
+            <li
+                style="
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    border: solid 6px yellow;
+                    background: orange;
+                "
+            >沖縄</li>
+            <li
+                style="
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    border: solid 6px yellow;
+                    background: orange;
+                "
+            >北海道</li>
+            <li
+                style="
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    border: solid 6px yellow;
+                    background: orange;
+                "
+            >京都</li>
+        </ul>
+        <p>マーカーボックスのレイアウトやデザインは、::marker擬似要素や下記のプロパティを利用して調整できる。</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>プロパティ</th>
+                    <th>調整対象</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>list-style-position</td>
+                    <td>マーカーボックスの挿入位置</td>
+                </tr>
+                <tr>
+                    <td>list-style-type</td>
+                    <td>リストマークの種類</td>
+                </tr>
+                <tr>
+                    <td>list-style-image</td>
+                    <td>リストマークの画像</td>
+                </tr>
+                <tr>
+                    <td>lsit-style</td>
+                    <td>上記3つの値をまとめて指定</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre>
+            「::marker」擬似要素
+            ::marker擬似要素ではマーカーボックスのCSSを調整する。
+            ただし、調整できるのは以下のプロパティに限られる。
+            white-space / color / text-combine-upright / unicode-bidi / direction / content / フォント、アニメーション、トランジション関連のプロパティ
+
+
+            li::marker {color: red}
+        </pre>
+        <ul>
+            <li class="marker-red">沖縄</li>
+            <li class="marker-red">北海道</li>
+            <li class="marker-blue">京都</li>
+        </ul>
+        <pre>
+            マーカーボックスの挿入位置
+            list-style-positionプロパティを使用すると、マーカーボックスの挿入位置をしているすことができる。
+            標準では「outer」となり、ブロックボックスの外側（ボーダーの左側）に挿入される。「inside」を指定すると下記のコンテンツの左側に挿入することができる
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>値</th>
+                        <th>マーカーボックスの表示位置</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>outside</td>
+                        <td>ブロックボックスの外側（ボーダーの左側）　デフォルト値</td>
+                    </tr>
+                    <tr>
+                        <td>inside</td>
+                        <td>ブロックボックスの内側（コンテンツの左側）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </pre>
+        <p>↓inside</p>
+        <ul>
+            <li
+                style="
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    border: solid 6px yellow;
+                    background: orange;
+                    list-style-position: inside;
+                "
+            >沖縄</li>
+            <li
+                style="
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    border: solid 6px yellow;
+                    background: orange;
+                    list-style-position: inside;
+                "
+            >北海道</li>
+            <li
+                style="
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    border: solid 6px yellow;
+                    background: orange;
+                    list-style-position: inside;
+                "
+            >京都</li>
+        </ul>
+        <p>↓outside（デフォルト値）</p>
+        <ul>
+            <li
+                style="
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    border: solid 6px yellow;
+                    background: orange;
+                "
+            >沖縄</li>
+            <li
+                style="
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    border: solid 6px yellow;
+                    background: orange;
+                "
+            >北海道</li>
+            <li
+                style="
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    border: solid 6px yellow;
+                    background: orange;
+                "
+            >京都</li>
+        </ul>
+        <pre>
+            リストマークの種類
+            list-style-typeプロパティを使用すると、マーカーボックスの中に表示するリストマークの種類を指定することができる。
+            指定できる値は以下のようになっており、シンボル以外の値を指定すると連番での表示になる。
+
+            リストマークを削除したい場合には、値を「none」にする。
+
+            また、文字をリストマークとして表示したい場合は、クォーテーションで囲んで指定する。
+
+            list-style-imageでは画像も表示できる
+        </pre>
+        <p>li {list-style-type: lower-roman;}</p>
+        <ul>
+            <li style="list-style-type: lower-roman;">沖縄</li>
+            <li style="list-style-type: lower-roman;">北海道</li>
+            <li style="list-style-type: lower-roman;">京都</li>
+        </ul>
+        <p>li {list-style-type: none;}</p>
+        <ul>
+            <li style="list-style-type: none;">沖縄</li>
+            <li style="list-style-type: none;">北海道</li>
+            <li style="list-style-type: none;">京都</li>
+        </ul>
+        <p>li {list-style-type: '★':}</p>
+        <ul>
+            <li style="list-style-type: '★';">沖縄</li>
+            <li style="list-style-type: '★';">北海道</li>
+            <li style="list-style-type: '★';">京都</li>
+        </ul>
+        <p>li {list-style-image: url(パス);}</p>
+        <ul>
+            <li style="list-style-image: url(skill1.jpeg); ">沖縄</li>
+        </ul>
+
+        <h4>display: none  display: contents　ボックスを構成しない</h4>
+        <p>子階層も含めて構成しないようにするには「none」、子階層は残して構成しないようにする場合には「contents」と指定する。</p>
+        <pre>
+            例
+            下記では、divのdisplayを「flex」と指定し、均等割で中身を並べたもの。
+            ただし、ボックスBとCはdivでグループ化しているので、均等割で横に並ぶのはボックスA、div、Dとなる。
+        </pre>
+        <div class="container9" style="display: flex; border: solid 6px yellow;">
+            <div class="box____A red" style="flex: 1 1 0;">A</div>
+            <div class="container10 blue" style="width: 200px; height: 200px;flex: 1 1 0;">
+                <div class="box____B green">B</div>
+                <div class="box____C orange">C</div>
+            </div>
+            <div class="box____D purple" style="flex: 1 1 0;">D</div>
+        </div>
+        <pre>
+            例
+            noneを指定した場合
+        </pre>
+        <div class="container9" style="display: flex; border: solid 6px yellow;">
+            <div class="box____A red" style="flex: 1 1 0;">A</div>
+            <div class="container10 blue" style="width: 200px; height: 200px;flex: 1 1 0; display: none;">
+                <div class="box____B green">B</div>
+                <div class="box____C orange">C</div>
+            </div>
+            <div class="box____D purple" style="flex: 1 1 0;">D</div>
+        </div>
+        <pre>
+            例
+            contentsを指定した場合
+        </pre>
+        <div class="container9" style="display: flex; border: solid 6px yellow;">
+            <div class="box____A red" style="flex: 1 1 0;">A</div>
+            <div class="container10 blue" style="width: 200px; height: 200px;flex: 1 1 0; display: contents;">
+                <div class="box____B green">B</div>
+                <div class="box____C orange">C</div>
+            </div>
+            <div class="box____D purple" style="flex: 1 1 0;">D</div>
+        </div>
+    </div>
+
+    <div class="box25">25 特殊なボックス
+        <h4>float: 配置　フロート</h4>
+        <p>floatプロパティを「left」または「right」と指定すると、フローティングボックス（浮動ボックス）を構成し、右や左に寄せることができる。</p>
+        <pre>
+            例
+            下記の例は、左寄席の配置になり、別のレイヤーで扱われるようになる。
+            「ボックスの中身はフローティングボックスと重ならないように表示する」と言う決まりがあるので、テキストの書いてあるボックスの下には入らない。
+            .box_____A {
+                float: left;
+                width: 200px;
+            }
+        </pre>
+        <div class="box_____A red" style="float: left; width: 200px; height: 30px;">A</div>
+        <div class="box_____B blue">B　家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきた。</div>
+        <div class="box_____C green">C　作業中のデータはクラウドで管理することができるので、収納スペースを用意する必要がない</div>
+        <pre>
+            例
+            floatを指定したボックスが続く場合、それらは同じレイヤーで扱われるため、インラインボックスのような振る舞いをするので、横並びになる
+            .box_____A, .box_____B, .box_____C {
+                float: left;
+                width: 200px;
+            }
+        </pre>
+        <div class="box_____A red" style="float: left; width: 200px;">A</div>
+        <div class="box_____B blue" style="float: left; width: 200px;">B　家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきた。</div>
+        <div class="box_____C green" style="float: left; width: 200px;">C　作業中のデータはクラウドで管理することができるので、収納スペースを用意する必要がない</div>
+        <!-- フローティングボックスの影響排除 -->
+        <div style="clear: left;"></div>
+        <pre>
+            例
+            rightで指定すると右寄せになる。
+            .box_____A, .box_____B, .box_____C {
+                float: right;
+                width: 200px;
+            }
+        </pre>
+        <div class="box_____A red" style="float: right; width: 200px;">A</div>
+        <div class="box_____B blue" style="float: right; width: 200px;">B　家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきた。</div>
+        <div class="box_____C green" style="float: right; width: 200px;">C　作業中のデータはクラウドで管理することができるので、収納スペースを用意する必要がない</div>
+        <!-- フローティングボックスの影響排除 -->
+        <div style="clear: right;"></div>
+        <pre>
+            例
+            前にあるフローティングボックスの影響排除をする
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>clearの値</th>
+                        <th>機能</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>left</td>
+                        <td>左寄せで配置したフローティングボックスの影響を排除</td>
+                    </tr>
+                    <tr>
+                        <td>right</td>
+                        <td>右寄せで配置したフローティングボックスの影響を排除</td>
+                    </tr>
+                    <tr>
+                        <td>both</td>
+                        <td>全てのフローティングボックスの影響を排除</td>
+                    </tr>
+                    <tr>
+                        <td>none</td>
+                        <td>排除なし</td>
+                    </tr>
+                </tbody>
+            </table>
+            .box_____A {
+                float: right;
+                width: 200px;
+            }
+
+            .box_____C {
+                clear: left;
+            }
+        </pre>
+        <div class="box_____A red" style="float: left; width: 200px; height: 30px;">A</div>
+        <div class="box_____B blue">B　家でリラックスしながら仕事をする。そんなことが実現可能な世の中になってきた。</div>
+        <div class="box_____C green" style="clear: left;">C　作業中のデータはクラウドで管理することができるので、収納スペースを用意する必要がない</div>
+    
+        <h4>position: ポジショニングスキーム</h4>
+        <p>positionプロパティを指定すると「ポジションボックス」が構成され、フローティングボックスと同じように別レイヤーで位置を指定することができる。</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>positionの値</th>
+                    <th>ポジショニングスキーム</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>relative</td>
+                    <td>相対配置</td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>絶対配置</td>
+                </tr>
+                <tr>
+                    <td>fixed</td>
+                    <td>固定配置</td>
+                </tr>
+                <tr>
+                    <td>sticky</td>
+                    <td>スティッキー配置</td>
+                </tr>
+                <tr>
+                    <td>static</td>
+                    <td>ポジショニングスキームを使った配置を行わない</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre>
+            例
+            relative　相対配置
+
+            ボックスBを上から下に10px 左から右に5pxずらす場合
+
+            .boxb {
+                position: relative;
+                top: 10px;
+                left: 5px;
+            }
+        </pre>
+        <div style="border: solid 6px yellow;">
+            <div class="boxa red">A</div>
+            <div class="boxb blue" style="position: relative; top: 10px; left: 5px;">B</div>
+            <div class="boxc green">C</div>
+        </div>
+        <pre>
+            例
+            absolute　絶対配置
+
+            ボックスBを親の黄色枠のボックスを起点にしたから5px、右から10pxずらした場合
+
+            .container10 {
+                position: relative;
+                border: solid 6px yellow;
+            }
+
+            .boxb {
+                position: absolute;
+                bottom: 5px;
+                right: 10px;
+            }
+        </pre>
+        <div class="container10" style="position: relative; border: solid 6px yellow;">
+            <div class="boxa red">A</div>
+            <div class="boxb blue" style="position: absolute; right: 10px; bottom: 5px;">B</div>
+            <div class="boxc green">C</div>
+        </div>
+        <pre>
+            例
+            fixed　固定配置
+
+            ボックスBをブラウザ画面の左上に揃えて固定表示している。横幅を100%として横幅を合わせている
+
+            .boxb {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%
+            }
+        </pre>
+        <div class="container10" style="border: solid 6px yellow;">
+            <div class="boxa red">A</div>
+            <div class="boxb blue" style="position: fixed; top: 0; left: 0; width: 100%">position: fixedで固定しているボックスB</div>
+            <div class="boxc green">C</div>
+        </div>
+        <pre>
+            ボックスの重なり順　z-index
+            z-indexプロパティでは、positionを指定したボックスの重なり順を指定することができる。
+            初期値は「0」となり、大きな数値になるにつれて上に重なる。マイナスの値を指定することも可能
+
+            .boxb {
+                z-index: -100;
+            }
+            をすると下記のものが
+        </pre>
+        <div style="border: solid 6px yellow;">
+            <div class="boxa red">A</div>
+            <div class="boxb blue" style="position: relative; top: 10px; left: 5px;">B</div>
+            <div class="boxc green">C</div>
+        </div>
+        <pre>
+            こうなる
+        </pre>
+        <div style="border: solid 6px yellow;">
+            <div class="boxa red">A</div>
+            <div class="boxb blue" style="position: relative; top: 10px; left: 5px; z-index: -100;">B</div>
+            <div class="boxc green">C</div>
+        </div>
+    </div>
+    <div class="box26">26　ボックスに関する付帯情報
+        <p>オーバーフローしたコンテンツの表示</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>プロパティ</th>
+                    <td>機能</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>overflow</td>
+                    <td>オーバーフローしたコンテンツの表示方法を指定</td>
+                </tr>
+                <tr>
+                    <td>resize</td>
+                    <td>ボックスのリサイズを指定</td>
+                </tr>
+                <tr>
+                    <td>scroll-snap-type</td>
+                    <td>スクロールスナップを指定</td>
+                </tr>
+                <tr>
+                    <td>scroll-snap-align</td>
+                    <td>スクロールスナップのスナップ位置を指定</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>ボックスの装飾</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>プロパティ</th>
+                    <th>機能</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>border-radius</td>
+                    <td>角を丸にする</td>
+                </tr>
+                <tr>
+                    <td>box-shadow</td>
+                    <td>ボックスシャドウ</td>
+                </tr>
+                <tr>
+                    <td>outline</td>
+                    <td>アウトライン</td>
+                </tr>
+                <tr>
+                    <td>cursor</td>
+                    <td>カーソル</td>
+                </tr>
+                <tr>
+                    <td>visibility</td>
+                    <td>ビジビリティ</td>
+                </tr>
+                <tr>
+                    <td>opacity</td>
+                    <td>透明度</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre>
+            overflow: 表示方法　オーバーフローしたコンテンツの表示方法
+
+            visible　表示する
+            <div class="red" style="width: 100%; height: 30px; overflow: visible; color: black;">
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            </div>
+
+            hidden　隠す
+            <div class="red" style="width: 100%; height: 30px; overflow: hidden; color: black;">
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            </div>
+
+            scroll　隠す（隠した部分はスクロールで閲覧可能、縦横のスクロールバーが表示される）
+            <div class="red" style="width: 100%; height: 30px; overflow: scroll; color: black;">
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            </div>
+
+            auto　隠す（隠した部分はスクロールで閲覧可能、必要に応じてスクロールバーが表示される）
+            <div class="red" style="width: 100%; height: 30px; overflow: auto; color: black;">
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            </div>
+
+            overflowでオーバーフローを隠したボックスは、resizeプロパティでリサイズを許可することができる
+
+            both　縦横方向のリサイズの許可
+            <div class="red" style="width: 100%; height: 30px; overflow: auto; color: black; resize: both;">
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            </div>
+
+            horizontal　横方向だけリサイズの許可
+            <div class="red" style="width: 100%; height: 30px; overflow: auto; color: black; resize: horizontal;">
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            </div>
+
+            vertical　縦方向だけリサイズの許可
+            <div class="red" style="width: 100%; height: 30px; overflow: auto; color: black; resize: vertical;">
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+                texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            </div>
+        </pre>
+        <pre>
+            opacity: 不透明度　ボックスの不透明度
+
+            下記はボックスBを透明にしている
+
+            0に近いほど透明に近くなる
+
+            ボックスB {
+                opacity: 0.6;
+            }
+        </pre>
+        <div style="border: solid 6px yellow;">
+            <div class="boxa red">A</div>
+            <div class="boxb blue" style="position: relative; top: 10px; left: 5px; opacity: 0.6;">B</div>
+            <div class="boxc green">C</div>
+        </div>
+        <pre>
+            cursor: 形状　カーソル
+            ボックスに重ねた時のカーソルの形状を指定することができる
+
+            <h2 style="cursor: text;">text</h2>
+            <h2 style="cursor: pointer;">pointer</h2>
+            <h2 style="cursor: crosshair;">crosshair</h2>
+            <h2 style="cursor: all-scroll;">all-scroll</h2>
+            <h2 style="cursor: no-drop;">no-drop</h2>
+            <h2 style="cursor: nw-resize;">nw-resize</h2>
+            <h2 style="cursor: alias;">alias</h2>
+            <h2 style="cursor: wait;">wait</h2>
+            <h2 style="cursor: col-resize;">col-resize</h2>
+            <h2 style="cursor: url(skill5.jpeg), pointer;">画像</h2>
+
+            他にも色々ある
+        </pre>
+        <pre>
+            outline: スタイル　太さ　色　アウトライン
+
+            ボックスの枠線を装飾できる
+
+            <div style="outline: solid 2px green;">solid</div>
+            <div style="outline: groove 2px green;">groove</div>
+            <div style="outline: ridge 2px green;">ridge</div>
+            <div style="outline: inset 2px green;">inset</div>
+            <div style="outline: outset 2px green;">outset</div>
+            <div style="outline: dashed 2px green;">dashed</div>
+            <div style="outline: dotted 2px green;">dotted</div>
+        </pre>
+        <pre>
+            border-radius: 角丸の半径　ボックスの角丸
+
+            数値で指定
+
+            <h2 class="red" style="border-radius: 20px;">20px</h2>
+        </pre>
+        <pre>
+            box-shadow: 横オフセット 縦オフセット ブラー スプレッド　ボックスのドロップシャドウ
+            <h2 class="red" style="box-shadow: 30px 20px gray;">30px 20px gray</h2>
+
+            影をぼかす場合、3つ目のブラーの値を指定する
+            <h2 class="red" style="box-shadow: 30px 20px 20px gray;">30px 20px 20px gray</h2>
+
+            4つ目を指定すると影を大きくすることができる
+            <h2 class="red" style="box-shadow: 30px 20px 20px 15px gray;">30px 20px 20px 15px gray</h2>
+
+            内側に影をつける
+            <h2 class="red" style="box-shadow: 10px 10px 20px black inset;">10px 10px 20px black inset</h2>
+
+            ボックスに複数の影をつける
+            <h2 class="red" style="box-shadow: 10px 10px 20px green, 30px 20px 20px yellow;">10px 10px 20px green, 30px 20px 20px yellow</h2>
+        </pre>
+    </div>
+    <div class="box27">27　フレキシブルボックスレイアウト
+        <p>
+            フレキシブルボックスレイアウトを利用するとボックスを横に並べ、横幅、高さをフレキシブルにコントロールすることができます<br>
+            display: flexと指定して使用する。
+        </p>
+        <p>下記のレイアウトを横に並べる</p>
+        <div class="container border-all">
+            <div class="boxA red">A</div>
+            <div class="boxB blue">B</div>
+            <div class="boxC green">C</div>
+        </div>
+
+        <pre>
+            親要素にdisplayプロパティで「flex」を指定する
+            .container {
+                display: flex;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex;">
+            <div class="boxA red">A</div>
+            <div class="boxB blue">B</div>
+            <div class="boxC green">C</div>
+        </div>
+
+        <h4>flex: 伸長比 縮小比 ベースサイズ　フレックスアイテムの横幅と間隔</h4>
+        <pre>
+            flexプロパティでは、フレックスアイテムの横幅を決定する
+            下記はベースサイズだけを指定
+
+            例
+            .container {
+                display: flex;
+            }
+
+            .boxA {
+                flex: 0 0 100px;
+            }
+
+            .boxB {
+                flex: 0 0 200px;
+            }
+
+            .boxC {
+                flex: 0 0 300px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex;">
+            <div class="boxA red" style="flex: 0 0 100px">A</div>
+            <div class="boxB blue" style="flex: 0 0 200px">B</div>
+            <div class="boxC green" style="flex: 0 0 300px">C</div>
+        </div>
+
+        <pre>
+
+            ベースサイズはautoで指定することも可能
+            その場合は要素の中身（コンテンツ）に合わせた幅になる。
+
+            例
+            .container {
+                display: flex;
+            }
+
+            .boxA {
+                flex: 0 0 auto;
+            }
+
+            .boxB {
+                flex: 0 0 auto;
+            }
+
+            .boxC {
+                flex: 0 0 auto;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex;">
+            <div class="boxA red" style="flex: 0 0 auto">A</div>
+            <div class="boxB blue" style="flex: 0 0 auto">BBBBBBBBBBBBBBB</div>
+            <div class="boxC green" style="flex: 0 0 auto">CCCC</div>
+        </div>
+
+        <pre>
+            伸長比は、フレックスアイテムを上の例のようにベースサイズで並べた際に横幅にあまりのスペース（ポジティブスペース）がある場合に適用される
+
+            伸長比をすべて「１」にするとあまりのスペースを「1:1:1」で分割した値が各アイテムに追加される
+
+            例
+            .container {
+                display: flex;
+            }
+
+            .boxA {
+                flex: 1 0 100px;
+            }
+
+            .boxB {
+                flex: 1 0 200px;
+            }
+
+            .boxC {
+                flex: 1 0 300px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex;">
+            <div class="boxA red" style="flex: 1 0 100px">A</div>
+            <div class="boxB blue" style="flex: 1 0 200px">B</div>
+            <div class="boxC green" style="flex: 1 0 300px">C</div>
+        </div>
+        <pre>
+
+            これは最初の例のあまりのスペースを「0:4:1」で分割した値をアイテムに追加している
+
+            例
+            .container {
+                display: flex;
+            }
+
+            .boxA {
+                flex: 0 0 100px;
+            }
+
+            .boxB {
+                flex: 4 0 200px;
+            }
+
+            .boxC {
+                flex: 1 0 300px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex;">
+            <div class="boxA red" style="flex: 0 0 100px">A</div>
+            <div class="boxB blue" style="flex: 4 0 200px">B</div>
+            <div class="boxC green" style="flex: 1 0 300px">C</div>
+        </div>
+        <pre>
+
+            縮小比は、ベースサイズでアイテムを並べた際に親要素からはみ出た際に適用される。
+
+            下記では、120pxが横幅からはみ出している
+
+            例
+            .container {
+                display: flex;
+            }
+
+            .boxA {
+                flex: 0 0 100px;
+            }
+
+            .boxB {
+                flex: 0 0 200px;
+            }
+
+            .boxC {
+                flex: 0 0 300px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; width: 480px">
+            <div class="boxA red" style="flex: 0 0 100px">A</div>
+            <div class="boxB blue" style="flex: 0 0 200px">B</div>
+            <div class="boxC green" style="flex: 0 0 300px">C</div>
+        </div>
+        <pre>
+
+            縮小比を下記のようにすべて「１」で指定するとベースサイズに縮小比を掛け合わせた「100:200:300」の比率で分割され、
+            Aに-20、Bに-40、Cに-60ピクセルが配分される。
+            その結果、A:80px、B:160px、C:240pxになる
+
+            例
+            .container {
+                display: flex;
+            }
+
+            .boxA {
+                flex: 0 1 100px;
+            }
+
+            .boxB {
+                flex: 0 1 200px;
+            }
+
+            .boxC {
+                flex: 0 1 300px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; width: 480px">
+            <div class="boxA red" style="flex: 0 1 100px">A</div>
+            <div class="boxB blue" style="flex: 0 1 200px">B</div>
+            <div class="boxC green" style="flex: 0 1 300px">C</div>
+        </div>
+
+        <h4>gap: 間隔　フレックスアイテムの間隔</h4>
+        <pre>
+            gapプロパティを使用するとフレックスの間に余白を挿入し、間隔を調整できる
+
+            例
+            .container {
+                display: flex;
+                gap: 24px;
+                width: 900px;
+            }
+
+            .boxA {
+                flex: 1 0 100px;
+            }
+
+            .boxB {
+                flex: 1 0 200px;
+            }
+
+            .boxC {
+                flex: 1 0 300px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; gap: 24px; width: 900px">
+            <div class="boxA red" style="flex: 1 0 100px">A</div>
+            <div class="boxB blue" style="flex: 1 0 200px">B</div>
+            <div class="boxC green" style="flex: 1 0 300px">C</div>
+        </div>
+
+        <h4>order: 並び順　フレックスアイテムの並び順と並べる方向</h4>
+        <pre>
+            orderプロパティでは、アイテムの並び順を指定できる。
+            初期値では「０」となり、大きな数を指定するほど並び順が後になる。
+            値が同じ場合は記述した順に並ぶ
+
+            例
+            .container {
+                display: flex;
+            }
+
+            .container div {
+                flex: 1 1 0;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex;">
+            <div class="boxA red" style="flex: 1 1 0;">A</div>
+            <div class="boxB blue" style="flex: 1 1 0;">B</div>
+            <div class="boxC green" style="flex: 1 1 0;">C</div>
+            <div class="boxD purple" style="flex: 1 1 0;">D</div>
+            <div class="boxE black" style="flex: 1 1 0;">E</div>
+            <div class="boxF orange" style="flex: 1 1 0;">F</div>
+        </div>
+        <pre>
+
+            下記のように指定する
+
+            例
+            .container {
+                display: flex;
+            }
+
+            .container div {
+                flex: 1 1 0;
+            }
+
+            .boxC {
+                order: -1;
+            }
+
+            .boxB {
+                order: 1;
+            }
+
+            .boxD {
+                order: 2;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex;">
+            <div class="boxA red" style="flex: 1 1 0;">A</div>
+            <div class="boxB blue" style="flex: 1 1 0; order: 1;">B</div>
+            <div class="boxC green" style="flex: 1 1 0; order: -1;">C</div>
+            <div class="boxD purple" style="flex: 1 1 0; order: 2;">D</div>
+            <div class="boxE black" style="flex: 1 1 0;">E</div>
+            <div class="boxF orange" style="flex: 1 1 0;">F</div>
+        </div>
+
+        <h4>flex-direction: 方向　フレックスアイテムを並べる方向</h4>
+        <pre>
+            flex-directionプロパティでは、アイテムを並べる方向を指定できる。
+
+            flex-direction: row　はデフォルト（左から右へ並ぶ）
+
+            .container {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .boxA {
+                flex: 0 0 100px;
+            }
+
+            .boxB {
+                flex: 0 0 150px;
+            }
+
+            .boxC {
+                flex: 0 0 200px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; flex-direction: row;">
+            <div class="boxA red" style="flex: 0 0 100px;">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px;">B</div>
+            <div class="boxC green" style="flex: 0 0 200px;">C</div>
+        </div>
+
+        <pre>
+
+            flex-direction: row-reverse;　は右から左へ並ぶ
+
+            .container {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+
+            .boxA {
+                flex: 0 0 100px;
+            }
+
+            .boxB {
+                flex: 0 0 150px;
+            }
+
+            .boxC {
+                flex: 0 0 200px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; flex-direction: row-reverse;">
+            <div class="boxA red" style="flex: 0 0 100px;">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px;">B</div>
+            <div class="boxC green" style="flex: 0 0 200px;">C</div>
+        </div>
+
+        <pre>
+
+            flex-direction: column;　は上から縦に並ぶ
+
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .boxA {
+                flex: 0 0 100px;
+            }
+
+            .boxB {
+                flex: 0 0 150px;
+            }
+
+            .boxC {
+                flex: 0 0 200px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; flex-direction: column;">
+            <div class="boxA red" style="flex: 0 0 100px;">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px;">B</div>
+            <div class="boxC green" style="flex: 0 0 200px;">C</div>
+        </div>
+
+        <pre>
+
+            flex-direction: column-reverse;　は下から縦に並ぶ
+
+            .container {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .boxA {
+                flex: 0 0 100px;
+            }
+
+            .boxB {
+                flex: 0 0 150px;
+            }
+
+            .boxC {
+                flex: 0 0 200px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; flex-direction: column-reverse;">
+            <div class="boxA red" style="flex: 0 0 100px;">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px;">B</div>
+            <div class="boxC green" style="flex: 0 0 200px;">C</div>
+        </div>
+
+        <h4>flex-wrap: マルチライン　フレックスアイテムのマルチライン表示</h4>
+        <pre>
+            flex-wrapは、アイテムをマルチライン（複数行）で表示するかどうかを指定できる
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 600px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; flex-wrap: wrap; width: 600px;">
+            <div class="boxA red" style="flex: 0 0 50px">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px">B</div>
+            <div class="boxC green" style="flex: 0 0 200px">C</div>
+            <div class="boxD orange" style="flex: 0 0 250px">D</div>
+            <div class="boxE purple" style="flex: 0 0 300px">E</div>
+        </div>
+
+        <pre>
+            flexプロパティを伸長比に「1」を指定したら、隙間が消える
+        </pre>
+        <div class="container border-all" style="display: flex; flex-wrap: wrap; width: 600px;">
+            <div class="boxA red" style="flex: 1 0 50px">A</div>
+            <div class="boxB blue" style="flex: 1 0 150px">B</div>
+            <div class="boxC green" style="flex: 1 0 200px">C</div>
+            <div class="boxD orange" style="flex: 1 0 250px">D</div>
+            <div class="boxE purple" style="flex: 1 0 300px">E</div>
+        </div>
+
+        <pre>
+            flex-wrap: wrap-reverse　と指定すると新しいラインを上に作成できる。
+
+            .container {
+                display: flex;
+                flex-wrap: wrap-reverse;
+                width: 600px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; flex-wrap: wrap-reverse; width: 600px;">
+            <div class="boxA red" style="flex: 0 0 50px">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px">B</div>
+            <div class="boxC green" style="flex: 0 0 200px">C</div>
+            <div class="boxD orange" style="flex: 0 0 250px">D</div>
+            <div class="boxE purple" style="flex: 0 0 300px">E</div>
+        </div>
+
+        <pre>
+            flex-wrapと
+            flex-direction を組み合わせたら
+            縦方向に新しいラインを作成することができる
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 600px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; flex-direction: column; flex-wrap: wrap; height: 600px;">
+            <div class="boxA red" style="flex: 0 0 50px">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px">B</div>
+            <div class="boxC green" style="flex: 0 0 200px">C</div>
+            <div class="boxD orange" style="flex: 0 0 250px">D</div>
+            <div class="boxE purple" style="flex: 0 0 300px">E</div>
+        </div>
+
+        <pre>
+            上記の
+            flex-direction　と　flex-wrap　は
+            flex-flowプロパティでまとめることもできる
+
+            .container {
+                display: flex;
+                flex-flow: column wrap;
+                height: 600px;
+            }
+        </pre>
+        <div class="container border-all" style="display: flex; flex-flow: column wrap; height: 600px;">
+            <div class="boxA red" style="flex: 0 0 50px">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px">B</div>
+            <div class="boxC green" style="flex: 0 0 200px">C</div>
+            <div class="boxD orange" style="flex: 0 0 250px">D</div>
+            <div class="boxE purple" style="flex: 0 0 300px">E</div>
+        </div>
+
+        <h4>justify-content: 位置揃え　横方向の位置揃え</h4>
+        <pre>
+            justify-contentプロパティではアイテムの横方向の位置を揃えられる。
+
+            アイテムが左から始まる（デフォルト値）
+
+            justify-content: flex-start;
+        </pre>
+        <div class="border-all" style="display: flex; justify-content: flex-start;">
+            <div class="boxA red" style="flex: 0 0 30%">A</div>
+            <div class="boxB blue" style="flex: 0 0 30%">B</div>
+            <div class="boxC green" style="flex: 0 0 30%">C</div>
+        </div>
+
+        <pre>
+            アイテムが右から始まる
+
+            justify-content: flex-end;
+        </pre>
+        <div class="border-all" style="display: flex; justify-content: flex-end;">
+            <div class="boxA red" style="flex: 0 0 30%">A</div>
+            <div class="boxB blue" style="flex: 0 0 30%">B</div>
+            <div class="boxC green" style="flex: 0 0 30%">C</div>
+        </div>
+
+        <pre>
+            アイテムが真ん中による
+
+            justify-content: center;
+        </pre>
+        <div class="border-all" style="display: flex; justify-content: center;">
+            <div class="boxA red" style="flex: 0 0 30%">A</div>
+            <div class="boxB blue" style="flex: 0 0 30%">B</div>
+            <div class="boxC green" style="flex: 0 0 30%">C</div>
+        </div>
+
+        <pre>
+            アイテムが幅いっぱい等間隔に広がる
+
+            justify-content: space-between;
+        </pre>
+        <div class="border-all" style="display: flex; justify-content: space-between;">
+            <div class="boxA red" style="flex: 0 0 30%">A</div>
+            <div class="boxB blue" style="flex: 0 0 30%">B</div>
+            <div class="boxC green" style="flex: 0 0 30%">C</div>
+        </div>
+        <pre>
+            アイテムの余白が均等になり、両サイドのみ余白が半分のサイズになる
+
+            justify-content: space-around;
+        </pre>
+        <div class="border-all" style="display: flex; justify-content: space-around;">
+            <div class="boxA red" style="flex: 0 0 30%">A</div>
+            <div class="boxB blue" style="flex: 0 0 30%">B</div>
+            <div class="boxC green" style="flex: 0 0 30%">C</div>
+        </div>
+
+        <h4>align-itemns: 位置揃え　縦方向の位置揃え</h4>
+        <pre>
+            align-itemnsプロパティは、アイテムの縦方向の位置を揃えられる
+
+            align-itemns: stretch　（デフォルト値）　↓
+        </pre>
+        <div class="border-all" style="display: flex; align-items: stretch;">
+            <div class="boxA red" style="flex: 0 0 30%">A<br>A</div>
+            <div class="boxB blue" style="flex: 0 0 30%">B<br>B<br>B</div>
+            <div class="boxC green" style="flex: 0 0 30%">C</div>
+        </div>
+
+        <pre>
+            アイテムの中身により高さが異なり、上を起点に表示される
+            align-itemns: flex-start;　↓
+        <div class="border-all" style="display: flex; align-items: flex-start;">
+            <div class="boxA red" style="flex: 0 0 30%">A<br>A</div>
+            <div class="boxB blue" style="flex: 0 0 30%">B<br>B<br>B</div>
+            <div class="boxC green" style="flex: 0 0 30%">C</div>
+        </div>
+
+        <pre>
+            アイテムの中身により高さが異なり、下を起点に表示される
+            align-itemns: flex-end;　↓
+        </pre>
+        <div class="border-all" style="display: flex; align-items: flex-end;">
+            <div class="boxA red" style="flex: 0 0 30%">A<br>A</div>
+            <div class="boxB blue" style="flex: 0 0 30%">B<br>B<br>B</div>
+            <div class="boxC green" style="flex: 0 0 30%">C</div>
+        </div>
+
+        <pre>
+            align-itemns: baseline;　↓
+        </pre>
+        <div class="border-all" style="display: flex; align-items: baseline;">
+            <div class="boxA red" style="flex: 0 0 30%; font-size: 30px;">A</div>
+            <div class="boxB blue" style="flex: 0 0 30%">B<br>B<br>B</div>
+            <div class="boxC green" style="flex: 0 0 30%">C</div>
+        </div>
+
+        <pre>
+            align-itemns: center;　↓
+        </pre>
+        <div class="border-all" style="display: flex; align-items: center;">
+            <div class="boxA red" style="flex: 0 0 30%; font-size: 30px;">A</div>
+            <div class="boxB blue" style="flex: 0 0 30%">B<br>B<br>B</div>
+            <div class="boxC green" style="flex: 0 0 30%">C</div>
+        </div>
+
+        <h4>align-content: 位置揃え　マルチラインの位置揃え</h4>
+        <pre>
+            align-contentプロパティはマルチラインの位置揃えを指定できる。
+
+            align-content: stretch;　(デフォルト値)　↓
+        </pre>
+        <div class="container border-all" style="display: flex; flex-wrap: wrap; align-content: stretch; width: 600px; height: 200px;">
+            <div class="boxA red" style="flex: 0 0 50px">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px">B</div>
+            <div class="boxC green" style="flex: 0 0 200px">C</div>
+            <div class="boxD orange" style="flex: 0 0 250px">D</div>
+            <div class="boxE purple" style="flex: 0 0 300px">E</div>
+        </div>
+
+        <pre>
+            align-content: flex-start;　↓
+        </pre>
+        <div class="container border-all" style="display: flex; flex-wrap: wrap; align-content: flex-start; width: 600px; height: 200px;">
+            <div class="boxA red" style="flex: 0 0 50px">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px">B</div>
+            <div class="boxC green" style="flex: 0 0 200px">C</div>
+            <div class="boxD orange" style="flex: 0 0 250px">D</div>
+            <div class="boxE purple" style="flex: 0 0 300px">E</div>
+        </div>
+
+        <pre>
+            align-content: flex-end;　↓
+        </pre>
+        <div class="container border-all" style="display: flex; flex-wrap: wrap; align-content: flex-end; width: 600px; height: 200px;">
+            <div class="boxA red" style="flex: 0 0 50px">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px">B</div>
+            <div class="boxC green" style="flex: 0 0 200px">C</div>
+            <div class="boxD orange" style="flex: 0 0 250px">D</div>
+            <div class="boxE purple" style="flex: 0 0 300px">E</div>
+        </div>
+
+        <pre>
+            align-content: center;　↓
+        </pre>
+        <div class="container border-all" style="display: flex; flex-wrap: wrap; align-content: center; width: 600px; height: 200px;">
+            <div class="boxA red" style="flex: 0 0 50px">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px">B</div>
+            <div class="boxC green" style="flex: 0 0 200px">C</div>
+            <div class="boxD orange" style="flex: 0 0 250px">D</div>
+            <div class="boxE purple" style="flex: 0 0 300px">E</div>
+        </div>
+
+        <pre>
+            align-content: space-between;　↓
+        </pre>
+        <div class="container border-all" style="display: flex; flex-wrap: wrap; align-content: space-between; width: 600px; height: 200px;">
+            <div class="boxA red" style="flex: 0 0 50px">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px">B</div>
+            <div class="boxC green" style="flex: 0 0 200px">C</div>
+            <div class="boxD orange" style="flex: 0 0 250px">D</div>
+            <div class="boxE purple" style="flex: 0 0 300px">E</div>
+        </div>
+
+        <pre>
+            align-content: space-around;　↓
+        </pre>
+        <div class="container border-all" style="display: flex; flex-wrap: wrap; align-content: space-around; width: 600px; height: 200px;">
+            <div class="boxA red" style="flex: 0 0 50px">A</div>
+            <div class="boxB blue" style="flex: 0 0 150px">B</div>
+            <div class="boxC green" style="flex: 0 0 200px">C</div>
+            <div class="boxD orange" style="flex: 0 0 250px">D</div>
+            <div class="boxE purple" style="flex: 0 0 300px">E</div>
+        </div>
+    </div>
+
+    <div class="box28">28 テーブルレイアウト
+        <pre>
+            tableタグで今まで使用してきているので割愛する
+
+            captionタグでtableにタイトルを付与できる
+
+        </pre>
+        <table border>
+            <caption style="color: red;">テーブルのタイトル</caption>
+            <tr>
+                <th>プラン</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <th>料金</th>
+                <td>100円</td>
+                <td>500円</td>
+                <td>1000円</td>
+            </tr>
+            <tr>
+                <th>容量</th>
+                <td>10GB</td>
+                <td>20GB</td>
+                <td>50GB</td>
+            </tr>
+        </table>
+
+        <pre>
+            caption-side: 位置;　でキャプションの表示位置を変えられる。
+
+            「top」と「bottom」を指定できる。
+
+            下記の例は「bottom」を指定
+
+        </pre>
+        <table border>
+            <caption style="caption-side: bottom; color: red;">テーブルのタイトル</caption>
+            <tr>
+                <th>プラン</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <th>料金</th>
+                <td>100円</td>
+                <td>500円</td>
+                <td>1000円</td>
+            </tr>
+            <tr>
+                <th>容量</th>
+                <td>10GB</td>
+                <td>20GB</td>
+                <td>50GB</td>
+            </tr>
+        </table>
+
+        <h4>複数の行・列にまたがるセルの作成</h4>
+
+        <pre>
+            colspan属性で列数を指定して、列をまたぐ<br />
+            rowspan属性で行数を指定して、行をまたぐことができる。
+
+            下記は
+            「プラン」の thタグに　colspan="2"　を指定
+            「サーバー」のthタグに　rowspan="2"　を指定している
+
+        </pre>
+        <table border>
+            <tr>
+                <th colspan="2">プラン</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <th rowspan="2">サーバー</th>
+                <th>利用料金</th>
+                <td>100円</td>
+                <td>500円</td>
+                <td>1000円</td>
+            </tr>
+            <tr>
+                <th>容量</th>
+                <td>10GB</td>
+                <td>20GB</td>
+                <td>50GB</td>
+            </tr>
+        </table>
+
+        <h4>列のグループ</h4>
+        <pre>
+            colgroupタグで列のグループを指定できる。
+
+            ちなみに行のグループは theadタグ、　tbodyタグ、　tfootタグで指定できる。（これはよく使ってきたので割愛）
+
+            colgrouタグ内に colタグを記述した数で列数を指定できる。
+
+            captionタグの下に記述する
+
+            下記の例は
+
+            1つ目の列を「1グループ」
+            ２~4つ目の列を「2グループ」にしている
+
+            見た目じゃわからない。。。。
+
+            colタグには、　span属性で数を指定することもできる。
+        </pre>
+        <table border>
+            <caption>プランの比較</caption>
+            <colgroup><col></colgroup>
+            <colgroup><col span="3"></colgroup>
+            <tr>
+                <th>プラン</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <th>利用料金</th>
+                <td>100円</td>
+                <td>500円</td>
+                <td>1000円</td>
+            </tr>
+            <tr>
+                <th>容量</th>
+                <td>10GB</td>
+                <td>20GB</td>
+                <td>50GB</td>
+            </tr>
+        </table>
+
+        <h4>テーブルの列の横幅の決定方法</h4>
+        <pre>
+            table-layout: 決定方法　
+
+            テーブルの列の横幅の決定方法を指定することができる。
+
+            全てのデータを読み込んでから決定する場合は「auto」を指定する
+
+            １行目のデータを読み込んだ段階で蹴ってする場合は「fixed」を指定する
+            「fixed」はテーブルの表示を速くする効果がある。
+            tableタグの横幅をwidthプロパティで指定している場合のみ機能する
+
+            指定できる値は「auto」と「fixed」だけ
+
+            下記の例は
+            tableタグに width: 600px; table-layout: auto;
+            「プラン」に width: 80px;
+            を指定している。
+
+            「auto」を指定しているので、列の横幅は全てのデータを読み込んでから、同じ列に含まれる最も大きなセルの横幅に設定される。
+            そのため、「プラン」に指定した、80pxではなく、２行目のセルの横幅で表示される。
+        </pre>
+        <table border style="table-layout: auto; width: 600px;">
+            <caption>プランの比較</caption>
+            <tr>
+                <th style="width: 80px;">プラン</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <th>利用料金
+                    SPECIALZATION
+                </th>
+                <td>100円</td>
+                <td>500円</td>
+                <td>1000円</td>
+            </tr>
+            <tr>
+                <th>容量</th>
+                <td>10GB</td>
+                <td>20GB</td>
+                <td>50GB</td>
+            </tr>
+        </table>
+        <pre>
+            下記は、「fixed」を指定した場合。
+
+            「プラン」に指定した、80pxで表示される。
+        </pre>
+        <table border style="table-layout: fixed; width: 600px;">
+            <caption>プランの比較</caption>
+            <tr>
+                <th style="width: 80px;">プラン</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <th>利用料金
+                    SPECIALZATION
+                </th>
+                <td>100円</td>
+                <td>500円</td>
+                <td>1000円</td>
+            </tr>
+            <tr>
+                <th>容量</th>
+                <td>10GB</td>
+                <td>20GB</td>
+                <td>50GB</td>
+            </tr>
+        </table>
+
+        <h4>ボーダーの間隔</h4>
+        <pre>
+            border-spacing: 間隔　で指定可能
+
+            下記の例は
+            border-spacing: 20px; をtableタグに指定した場合
+        </pre>
+        <table border style="border-spacing: 20px;">
+            <caption>プランの比較</caption>
+            <tr>
+                <th>プラン</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <th>利用料金
+                    SPECIALZATION
+                </th>
+                <td>100円</td>
+                <td>500円</td>
+                <td>1000円</td>
+            </tr>
+            <tr>
+                <th>容量</th>
+                <td>10GB</td>
+                <td>20GB</td>
+                <td>50GB</td>
+            </tr>
+        </table>
+        <pre>
+            下記は
+            border-spacing: 10px（ヨコ） 40px（タテ）;　にした場合
+        </pre>
+        <table border style="border-spacing: 10px 40px;">
+            <caption>プランの比較</caption>
+            <tr>
+                <th>プラン</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <th>利用料金
+                    SPECIALZATION
+                </th>
+                <td>100円</td>
+                <td>500円</td>
+                <td>1000円</td>
+            </tr>
+            <tr>
+                <th>容量</th>
+                <td>10GB</td>
+                <td>20GB</td>
+                <td>50GB</td>
+            </tr>
+        </table>
+    </div>
+    <div class="box29">29 テキスト
+        <pre>
+            font-size: サイズ;　これでフォントサイズを指定できる
+
+            下記は
+            font-size: 50px; を指定している
+        </pre>
+        <span style="font-size: 50px;">文字サイズ50px</span>
+
+        <pre>
+            font-family: フォント;　これでフォントの種類を指定できる
+
+            下記のサイトで主要なOSのfontfamilyは確認できる
+            <a href="https://saruwakakun.com/font-family">参考サイト</a>
+        </pre>
+        <h3 style="font-family: 'Papyrus';">Papyrus</h3>
+
+        <pre>
+            font-weight: 太さ;　フォントの太さを指定できる
+
+            下記の値を指定できる
+             normal / bold / 100 / 200 / 300 / 400 / 500 / 600 / 700 / 800 / 900/ bolder / lighter
+        </pre>
+        <p style="font-weight: bolder;">bolder</p>
+        <p style="font-weight: lighter;">lighter</p>
+        <p style="font-weight: 900;">900</p>
+
+        <pre>
+            font-style: スタイル;　斜体を指定できる
+
+            下記の値を指定できる
+            normal / italic / oblique
+        </pre>
+        <p style="font-style: italic;">italic</p>
+        <p style="font-style: oblique;">oblique</p>
+
+        <pre>
+            font-stretch: 幅;　フォントの幅を指定できる
+
+            下記の値を指定できる
+            ultra-condensed / extra-condensed / condensed / semi-condensed / normal / semi-expanded / expanded / extra-expanded / ultra-expanded
+
+            フォントが幅広のデータや幅狭のデータを持っていないときや font-stretchを指定していない場合は
+            normalになる
+        </pre>
+        <div style="font-stretch: ultra-condensed; font-family: 'Helvetica Neue', 'Arial Nova', sans-serif;">Comfortable Office</div>
+
+        <pre>
+            font-variant: 字形;　字形を指定できる
+
+            下記の値を指定できる
+            normal / small-caps etc
+
+            他にも
+            diagonal-fractions discretionary-ligaturesなどを指定できる
+
+        </pre>
+        <div style="font-variant: normal; font-family: Verdana, Geneva, Tahoma, sans-serif;">Comfortable Office ← normal</div>
+        <div style="font-variant: small-caps; font-family: Verdana, Geneva, Tahoma, sans-serif;">Comfortable Office ← small-caps</div>
+
+    </div>
+</body>
+</html>
